@@ -113,3 +113,19 @@ for the port (4007) and the domain. The runbook is `docs/DEPLOY.md`.
   outcomes are not on the site, and the Contact page doesn't describe a fit.
 - **Type:** Source Serif 4 (self-hosted variable woff2, SIL OFL) with the
   system sans for labels and navigation.
+
+## 2026-11-25 — Leave the size of the studio unstated; add a Team page
+
+Sean's call: for now the site doesn't say whether Culture Studio is one
+person or many. Home, About, Contact and Work speak as the studio, and
+Sean's name appears only on a new **Team** page (founder, with a short bio;
+a photo comes later). This sets aside the kickoff doc's "Honest about size"
+(§2) for now. The site still claims no team it doesn't have: it implies no
+headcount, lists no roles that don't exist, and the earlier products are
+credited to Crafty Machine, as the old site did.
+
+Team members are listed in `Site::TEAM` (`src/site.rb`). Each bio is a
+partial, `src/partials/_team_<name>.html.erb`. A photo goes in
+`src/static/assets/team/` and is named in `photo:`.
+
+Nav: Work, About, Team, Contact.

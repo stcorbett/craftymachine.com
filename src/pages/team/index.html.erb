@@ -1,0 +1,22 @@
+<% page title: "Team", description: "The people of Culture Studio and Crafty Machine LLC." %>
+<section class="wrap pt-20">
+  <h1 class="text-5xl font-semibold tracking-tight">Team</h1>
+</section>
+
+<section class="wrap mt-12">
+  <% Site::TEAM.each do |person| %>
+    <article class="entry">
+      <div>
+        <% if person[:photo] %>
+          <img src="<%= asset("team/#{person[:photo]}") %>" alt="<%= person[:name] %>" width="224" height="280"
+               class="mb-4 aspect-[4/5] w-40 object-cover sm:w-full" loading="lazy">
+        <% end %>
+        <h2 class="text-2xl font-semibold text-ink"><%= person[:name] %></h2>
+        <p class="mt-1 font-sans text-sm text-ink-muted"><%= person[:role] %></p>
+      </div>
+      <div class="prose-cm">
+        <%= partial "team_#{person[:name].downcase.tr(" ", "_")}" %>
+      </div>
+    </article>
+  <% end %>
+</section>

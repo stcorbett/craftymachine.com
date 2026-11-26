@@ -6,7 +6,6 @@ module Site
   URL           = "https://craftymachine.com"
   CONTACT_EMAIL = "hello@craftymachine.com"
   COMPANY       = "Crafty Machine LLC"
-  PRINCIPAL     = "Sean Corbett"
 
   FIELDS = ["Software and Technology", "Hospitality", "Community Organizing"]
 
@@ -25,11 +24,17 @@ module Site
 
   # Past products, newest first. Years are left off until confirmed.
   PAST = [
-    { name: "HaveMyShift", role: "Founder",
+    { name: "HaveMyShift",
       summary: "Shift swapping for hourly workers: more hours, more time off, and cover when emergencies happen. " \
-               "Went through Techstars Boston. Over 10,000 shifts swapped." },
-    { name: "Fresh Metrix", role: "Founder",
-      summary: "SEO tooling. The first version was built in weeks, in Medellín, Colombia, " \
+               "Built and run by Crafty Machine; went through Techstars Boston. Over 10,000 shifts swapped." },
+    { name: "Fresh Metrix",
+      summary: "SEO tooling, launched by Crafty Machine. The first version was built in weeks, in Medellín, Colombia, " \
                "to test the market before spending more." },
+  ]
+
+  # The Team page, in order. Bio in src/partials/_team_<name>.html.erb;
+  # photo: a file under src/static/assets/team/, or nil.
+  TEAM = [
+    { name: "Sean Corbett", role: "Founder", photo: nil },
   ]
 end
