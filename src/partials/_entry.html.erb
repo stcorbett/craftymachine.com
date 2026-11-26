@@ -1,0 +1,14 @@
+<div class="entry">
+  <div>
+    <h3 class="text-xl font-semibold text-ink">
+      <% if item[:url] %><a href="<%= item[:url] %>" class="link text-ink"><%= item[:name] %></a><% else %><%= item[:name] %><% end %>
+    </h3>
+    <% if item[:role] %><p class="mt-1 font-sans text-sm text-ink-muted"><%= item[:role] %></p><% end %>
+  </div>
+  <div class="space-y-2">
+    <p class="text-lg leading-relaxed"><%= item[:summary] %></p>
+    <% if item.key?(:url) %>
+      <p class="font-sans text-sm text-ink-muted"><%= item[:url] ? item[:host] : "No public link" %></p>
+    <% end %>
+  </div>
+</div>

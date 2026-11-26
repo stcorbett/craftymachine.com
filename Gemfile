@@ -2,8 +2,6 @@ source "https://rubygems.org"
 
 ruby file: ".ruby-version"
 
-# Tailwind's standalone binary, no Node.
-gem "tailwindcss-ruby"
-
-# Local preview server for bin/dev (removed from Ruby's stdlib in 3.0).
-gem "webrick"
+# Build tooling only: nothing here runs in production.
+gem "tailwindcss-ruby", "~> 4.3" # standalone Tailwind binary, no Node
+gem "webrick", "~> 1.9"          # bin/dev's local server

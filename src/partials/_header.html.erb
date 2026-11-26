@@ -1,0 +1,10 @@
+<header class="wrap flex w-full flex-wrap items-baseline justify-between gap-x-8 gap-y-3 border-b border-rule py-6">
+  <a href="<%= path %>" class="text-lg font-semibold tracking-tight text-ink">
+    Culture Studio <span class="font-normal italic text-ink-muted">by Crafty Machine</span>
+  </a>
+  <nav aria-label="Main" class="flex flex-wrap gap-x-6 gap-y-2 font-sans text-sm">
+    <% [["work/", "Work"], ["about/", "About"], ["contact/", "Contact"]].each do |to, label| %>
+      <a href="<%= path(to) %>" class="<%= current?(to) ? "text-ink underline decoration-accent underline-offset-8" : "text-ink-muted hover:text-ink" %>"<%= ' aria-current="page"' if current?(to) %>><%= label %></a>
+    <% end %>
+  </nav>
+</header>

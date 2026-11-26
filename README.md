@@ -5,8 +5,7 @@ Machine*. Who we are, the apps of the ecosystem and the work behind them, and
 how to reach us. A static site with no back end, published on GitHub Pages
 at craftymachine.com.
 
-> **Status:** scaffolded. The brief is in progress; the build scripts and
-> pages come next. See `~/work/culture_studio/ecosystem_docs/apps/crafty_machine_culture_studio.md`.
+> **Status:** first build done, not yet deployed. See `docs/DEPLOY.md`.
 
 ## Stack
 
@@ -43,5 +42,5 @@ link resolves, every page has a title and description.
 bin/deploy
 ```
 
-DNS and GitHub Pages setup are one-off steps, recorded in `docs/DEPLOY.md`
-when they're done.
+`bin/deploy` checks, then pushes `main`; `.github/workflows/pages.yml`
+builds and publishes. One-off DNS and Pages setup: `docs/DEPLOY.md`.

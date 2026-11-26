@@ -1,0 +1,25 @@
+<% page title: "Work", description: "The live applications of Culture Studio, and the products Crafty Machine built before them." %>
+<section class="wrap pt-20 pb-6">
+  <h1 class="text-5xl font-semibold tracking-tight">Work</h1>
+  <p class="mt-6 max-w-2xl text-xl leading-relaxed text-ink-muted">
+    What is running today, and what came before it.
+  </p>
+</section>
+
+<section class="wrap mt-10" aria-labelledby="live">
+  <h2 id="live" class="eyebrow">Live applications</h2>
+  <div class="mt-4">
+    <% Site::APPS.each do |app| %>
+      <%= partial "entry", item: app %>
+    <% end %>
+  </div>
+</section>
+
+<section class="wrap mt-20" aria-labelledby="past">
+  <h2 id="past" class="eyebrow">Earlier products</h2>
+  <div class="mt-4">
+    <% Site::PAST.each do |product| %>
+      <%= partial "entry", item: product %>
+    <% end %>
+  </div>
+</section>

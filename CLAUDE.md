@@ -36,10 +36,20 @@ Pages. Its kickoff doc lives with the ecosystem's shared docs in
 - Source in `src/`, built output in `_site/` (gitignored). Never hand-edit
   `_site/`.
 - `bin/build` → `_site/`; `bin/dev` → build, watch, serve; `bin/deploy` →
-  checks, then publish to GitHub Pages (`--dry-run` supported).
+  checks, then push `main`; the Pages workflow publishes (`--dry-run` supported).
 - No npm, no bundler, no framework. A page that works without JavaScript is
   the default.
 
-**Status:** docs only (moved here from `culture_studio` on 2026-11-20). The
-brief is being gathered; `src/`, `bin/` and the Gemfile are built once it's
-answered.
+**Status:** first build done (2026-11-25), not yet deployed. The live domain
+still serves the placeholder; `docs/DEPLOY.md` is the switch-over runbook.
+Still to ask Sean: see the "Deferred" list in `docs/DECISIONS.md` (2026-11-25).
+
+## Scope: this repo only
+
+A Claude session started in this directory works in this repo only. Reading
+other ecosystem repos for reference is fine; editing, staging, committing or
+deploying in them is not. Work that spans apps (a Ruby bump, a shared
+convention, a change to `~/work/culture_studio/ecosystem_docs`) belongs to
+the session running in `~/work/culture_studio`. If work here needs a change
+elsewhere, say what and where, and leave it for that session or for Sean.
+(`ecosystem_docs/RAILS_BOOTSTRAP.md` → "Claude sessions: who works where".)

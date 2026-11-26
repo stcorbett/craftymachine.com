@@ -1,0 +1,40 @@
+<% page title: Site::TITLE, description: "Culture Studio, by Crafty Machine LLC: a network of applications and businesses that support humanity." %>
+<section class="wrap pt-20 pb-16 sm:pt-28">
+  <h1 class="max-w-4xl text-[2.6rem] font-semibold leading-[1.05] tracking-tight sm:text-7xl">
+    Culture Studio <span class="block font-normal italic text-ink-muted">— by Crafty Machine</span>
+  </h1>
+  <p class="mt-10 max-w-2xl text-xl leading-relaxed sm:text-2xl">
+    A network of applications and businesses that support humanity.
+  </p>
+</section>
+
+<section class="wrap" aria-labelledby="fields">
+  <h2 id="fields" class="eyebrow">Three fields</h2>
+  <ul class="mt-4 grid border-t border-rule sm:grid-cols-3">
+    <% Site::FIELDS.each_with_index do |field, i| %>
+      <li class="border-b border-rule py-5 text-2xl sm:border-b-0 <%= "sm:border-l sm:pl-6" if i > 0 %>"><%= field %></li>
+    <% end %>
+  </ul>
+</section>
+
+<section class="wrap mt-20" aria-labelledby="live">
+  <div class="flex items-baseline justify-between gap-4">
+    <h2 id="live" class="eyebrow">Live now</h2>
+    <a href="<%= path("work/") %>" class="link font-sans text-sm">All work</a>
+  </div>
+  <div class="mt-4">
+    <% Site::APPS.select { it[:url] }.each do |app| %>
+      <%= partial "entry", item: app %>
+    <% end %>
+  </div>
+</section>
+
+<section class="wrap mt-20" aria-labelledby="way-in">
+  <div class="border-t border-ink pt-10">
+    <h2 id="way-in" class="text-3xl font-semibold">Start a conversation</h2>
+    <p class="mt-4 max-w-2xl text-lg leading-relaxed text-ink-muted">
+      Write to <a class="link" href="mailto:<%= Site::CONTACT_EMAIL %>"><%= Site::CONTACT_EMAIL %></a>.
+      Messages go to <%= Site::PRINCIPAL %>.
+    </p>
+  </div>
+</section>

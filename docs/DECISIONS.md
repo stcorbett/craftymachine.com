@@ -81,3 +81,35 @@ shown until they launch.
 The three outcomes from the old site (bounce rate halved and conversion up
 25%; an enterprise-grade product in three weeks; $0 → $120k monthly
 transaction volume in three months) are confirmed accurate and are reused.
+
+## 2026-11-25 — Publish with GitHub Actions, as visittrellis.com does
+
+This replaces the 2026-11-20 choice of a `gh-pages` branch. visittrellis.com
+was built first and publishes with a GitHub Actions Pages workflow, and the
+second site copies the first. `bin/deploy` builds and checks locally, then
+pushes `main`. `.github/workflows/pages.yml` rebuilds on GitHub and deploys.
+What's live is always what's on `main`, a deploy can't publish uncommitted
+work, and there's no branch of built files. `bin/build`, `bin/dev`,
+`bin/check` and `bin/deploy` are copied from visittrellis.com, changed only
+for the port (4007) and the domain. The runbook is `docs/DEPLOY.md`.
+
+**Ruby 3.4.13**, the house pin as of 2026-11-25 (`RAILS_BOOTSTRAP.md`).
+
+## 2026-11-25 — First content
+
+- **Live apps, public names:** Trellis → visittrellis.com; Nightly Keep →
+  app.nightlykeep.com; What Where When → whatwherewhen.lakesoffire.org;
+  the word-game solver is listed with no link.
+- **Past products:** HaveMyShift (founder; Techstars Boston; over 10,000
+  shifts swapped) and Fresh Metrix (founder). Years are left off until
+  confirmed.
+- **Contact:** hello@craftymachine.com.
+- **The one-line description,** in Sean's words: "a network of applications
+  and businesses that support humanity."
+- **Location and photo:** left off for now.
+- **Deferred, to ask again:** which engagement each of the three outcomes
+  came from, the hospitality and community-organizing record, what a good
+  fit looks like, and a photo. Until they're answered, client work and
+  outcomes are not on the site, and the Contact page doesn't describe a fit.
+- **Type:** Source Serif 4 (self-hosted variable woff2, SIL OFL) with the
+  system sans for labels and navigation.
