@@ -25,7 +25,7 @@ Pages. Its kickoff doc lives with the ecosystem's shared docs in
   Trellis sales page). Whichever is built first sets the pattern for
   `bin/build`, `bin/dev` and `bin/deploy`; the other copies it.
 - **House conventions:** `~/work/culture_studio/ecosystem_docs/RAILS_BOOTSTRAP.md`. The parts
-  that apply here: Ruby 3.4.5, Tailwind via the standalone binary, no Node,
+  that apply here: Ruby 3.4.13, Tailwind via the standalone binary, no Node,
   bare-bones JS, Ruby `bin/` scripts, README shape, and **Git: stage, don't
   commit**. The Rails, Postgres and Heroku parts don't apply.
 
