@@ -14,13 +14,12 @@ Pages. Its kickoff doc lives with the ecosystem's shared docs in
 - **Decisions** (brand, structure, hosting) as they are made:
   `docs/DECISIONS.md`, dated, newest last.
 - **The old site's text**, for facts only: `docs/ARCHIVE.md`.
-- **The site that is live today:** `index.html`, `styles.css`, `blog/` and
-  `CNAME` at the root of this repo — a hand-written placeholder from March
-  2026, served by GitHub Pages from the root of `main`. Leave them serving
-  until `bin/deploy` publishes the new build; switching Pages to the new
-  output is part of writing `bin/deploy`. Its blog post
-  (`blog/why-bring-crafty-machine-back.html`) is source material in Sean's
-  own words.
+- **The March 2026 placeholder** (a hand-written page and a one-post blog)
+  was replaced by this build on 2026-11-25 and removed from the repo. Its
+  blog post is source material in Sean's own words:
+  `git show c474a78:blog/why-bring-crafty-machine-back.html`. The root
+  `CNAME` file is a leftover; Pages takes the domain from its settings and
+  from `src/static/CNAME`.
 - **The sister site,** built the same way: `~/work/visittrellis.com` (the
   Trellis sales page). Whichever is built first sets the pattern for
   `bin/build`, `bin/dev` and `bin/deploy`; the other copies it.
@@ -40,8 +39,8 @@ Pages. Its kickoff doc lives with the ecosystem's shared docs in
 - No npm, no bundler, no framework. A page that works without JavaScript is
   the default.
 
-**Status:** first build done (2026-11-25), not yet deployed. The live domain
-still serves the placeholder; `docs/DEPLOY.md` is the switch-over runbook.
+**Status:** live at craftymachine.com since 2026-11-25 (Pages from the Actions
+workflow). Remaining one-off steps are in `docs/DEPLOY.md`.
 Still to ask Sean: see the "Deferred" list in `docs/DECISIONS.md` (2026-11-25).
 
 ## Scope: this repo only

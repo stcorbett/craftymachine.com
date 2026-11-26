@@ -5,7 +5,7 @@ Machine*. Who we are, the apps of the ecosystem and the work behind them, and
 how to reach us. A static site with no back end, published on GitHub Pages
 at craftymachine.com.
 
-> **Status:** first build done, not yet deployed. See `docs/DEPLOY.md`.
+> **Status:** live at craftymachine.com since 2026-11-25. See `docs/DEPLOY.md`.
 
 ## Stack
 

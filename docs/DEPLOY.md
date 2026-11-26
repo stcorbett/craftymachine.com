@@ -50,14 +50,14 @@ Stops anyone else's Pages site claiming craftymachine.com.
 The site's only way in. In Google Workspace admin, add `hello@` as an alias
 of your user (or a group). Send it a test message.
 
-### 3. Commit — *not done*
+### 3. Commit — *done 2026-11-25*
 
 ```sh
 git diff --cached      # review
 git commit
 ```
 
-### 4. Switch Pages from the root of `main` to GitHub Actions — *not done*
+### 4. Switch Pages from the root of `main` to GitHub Actions — *done 2026-11-25*
 
 ```sh
 gh api -X PUT repos/stcorbett/craftymachine.com/pages -f build_type=workflow
@@ -69,7 +69,7 @@ serving until the first workflow deploy replaces it. If `cname` came back
 empty, set it again:
 `gh api -X PUT repos/stcorbett/craftymachine.com/pages -f cname=craftymachine.com`.
 
-### 5. First deploy — *not done*
+### 5. First deploy — *done 2026-11-25* (run 45742481763; redirects and 404 checked)
 
 ```sh
 bin/deploy
@@ -83,7 +83,7 @@ green, check:
   `https://craftymachine.com/`.
 - https://craftymachine.com/blog/ shows the new "That page isn't here".
 
-### 6. Remove the placeholder — *not done*
+### 6. Remove the placeholder — *done 2026-11-25* (staged; last in `c474a78`)
 
 Pages no longer reads the root of `main`, so the March files are dead
 weight. Keep `CNAME`.
@@ -98,10 +98,13 @@ bin/deploy
 
 ## Rolling back
 
-Put Pages back on the placeholder (it's in `main` until step 6, and in
-history after):
+A bad deploy: revert the commit and deploy again. What's live is what's on
+`main`.
 
 ```sh
-gh api -X PUT repos/stcorbett/craftymachine.com/pages \
-  -f build_type=legacy -f "source[branch]=main" -f "source[path]=/"
+git revert <commit>
+bin/deploy
 ```
+
+Or re-run an earlier good "Publish to GitHub Pages" run from the repo's
+Actions tab, which deploys that run's build without touching `main`.
